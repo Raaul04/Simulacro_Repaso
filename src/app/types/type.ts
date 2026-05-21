@@ -41,7 +41,6 @@ export type Episode={
     created:string
 }
 
-
 export type Info={
     count:number
     page:number

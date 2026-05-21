@@ -1,0 +1,27 @@
+
+.Main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: khaki;
+    width: 100%;
+    min-height: 100vh;
+    gap:30px
+}
+
+.TitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgb(50, 130, 204);
+    padding: 90px 90px; 
+    border-radius: 10px; 
+    margin-top: 50px;  
+}
+
+.TitleContainer h1{
+    color: azure;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,20 @@
+
+.containerNavigator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blueviolet;
+    gap: 10px;
+   
+}
+
+.nombre_link{
+    display: flex;
+    text-decoration: none;
+    color: #fabada;
+}
+
+.nombre_link:hover{
+    background-color: black;
+}
+
