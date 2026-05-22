@@ -1,0 +1,26 @@
+.characterList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.buttonId{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  padding: 10px;
+  margin-left: 190px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.buttonId:hover{
+  background-color: blueviolet;
+  cursor: pointer;
+}

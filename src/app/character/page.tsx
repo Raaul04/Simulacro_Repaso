@@ -1,44 +1,52 @@
 'use client'
 import { useEffect, useState } from "react";
-import { CharacterS, ResultsCharacter } from "../types/type";
+import { ResultsCharacter } from "../types/type";
 import api from "@/api/axios";
-
+import Character from "../components/Character";
+import Paginador from "../components/Paginador";
+import "./page.css"
 const character = () => {
-    const[character, setCharacter]=useState<CharacterS|null>(null)
-    const[loading, setLoading]=useState<boolean>(true)
-    const[page,setPage]=useState<number>(1)
+
+    const [character, setCharacter] = useState<ResultsCharacter | null>(null)
+    const [loading, setLoading] = useState<boolean>(true)
+    const [page, setPage] = useState(1)
 
 
-    const getCharacter=async()=>{
-        try{
-        api.get(`/character?page=${page}`).then((e)=>{
-            setCharacter(e.data)
-        })
-        .finally(()=>{
-            setLoading(false)
-        })
+    const getCharacter = async () => {
+        try {
+            api.get(`/character/?page=${page}`).then((e) => {
+                setCharacter(e.data)
+            })
+                .finally(() => {
+                    setLoading(false)
+                })
 
-        }catch(e){
+        } catch (e) {
             alert(String(e))
         }
     }
 
-    if(!loading){
-        return(
-            <h1></h1>
-        )
+ 
+
+    useEffect(() => {
+        getCharacter()
+    }, [page])
+
+       if(loading){
+        return(<h1>Loading...</h1>)
     }
 
-    useEffect(()=>{
+    return (
+        <div className="characterList">
+            {character?.results.map((e) => (
+                <div key={e.id}>
+                    <Character personaje={e} />
+                </div>
 
+            ))}
+                <Paginador next={!!character?.info.next} prev={!!character?.info.prev} page={page} setPage={((e)=>{setPage(e)})}></Paginador>
 
-
-    },[page])
-
-  return (
-    <div className="characterContainer">
-        <h1>Character Page</h1>
-    </div>
+         </div>
   )
 }
 

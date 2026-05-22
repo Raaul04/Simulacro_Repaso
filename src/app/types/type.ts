@@ -21,7 +21,7 @@ export type CharacterS={
     created:string
 }
 
-export type Location={
+export type LocationS={
     id:number
     name:string
     type:string
@@ -31,7 +31,7 @@ export type Location={
     created:string
 }
 
-export type Episode={
+export type EpisodeS={
     id:number
     name:string
     air_date:string
@@ -55,10 +55,10 @@ export type ResultsCharacter={
 
 export type ResultsLocations={
     info:Info
-    results:Location[]
+    results:LocationS[]
 }
 
 export type ResultsEpisodes={
     info:Info
-    results :Episode[]
+    results :EpisodeS[]
 }

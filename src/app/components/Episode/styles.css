@@ -1,0 +1,52 @@
+.episodeComponente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10 20 30;
+    padding: 25px 1px;
+    border: 2px solid rgb(198, 198, 101);
+    border-radius: 10px;
+
+}
+
+.episodeComponente h1{
+    text-decoration: underline bisque;
+    color: beige;
+    margin-left: 5px;
+}
+.episodeComponente:hover{
+    cursor: pointer;
+}
+
+.titleEpisode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    width: auto;
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid slateblue;
+    background-color: rgb(65, 157, 157);
+}
+
+.titleEpisode p {
+    overflow: hidden;
+}
+.titleEpisode:hover{
+    background-color: rgb(15, 234, 242);
+}
+
+.buttonEpisode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(184, 82, 147);
+}
+
+.buttonEpisode:hover{
+    background-color: rgb(4, 180, 71);
+    cursor: pointer;
+}
