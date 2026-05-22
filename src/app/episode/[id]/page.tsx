@@ -39,14 +39,17 @@ const episode=()=>{
             {episode?.characters.map((characterUrl) => {
                 return (
                     <button style={{padding:"10px 20px",fontSize:"10px",cursor:"pointer", backgroundColor:"cyan" }}
-                        key={characterUrl}
+                        key={characterUrl}// el key es el URL del personaje, que es único
                         onClick={() => router.push(characterUrl.replace(`https://rickandmortyapi.com/api`, ``))}
-                    >
-                        Ver personaje {characterUrl}
+                        // Esto redirige a la página del personaje, eliminando la parte base de la URL.
+                        // Dando resultado en algo como /character/1
+                        //Y con /character/[id]/page.tsx se renderiza la página del personaje correspondiente al id.
+                    >                                                                                          
+                        Ver personaje
                     </button>
                 )
             })}
-            <button style={{padding:"10px 20px",fontSize:"10px",cursor:"pointer", backgroundColor:"lime" }} onClick={()=>router.push(`/episode`)}>Volver a episodes</button>
+            <button style={{padding:"10px 20px",fontSize:"10px",cursor:"pointer", backgroundColor:"red" }} onClick={()=>router.push(`/episode`)}>Volver a episodes</button>
 
         </div>
     )

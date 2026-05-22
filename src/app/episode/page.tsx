@@ -5,16 +5,16 @@ import { ResultsEpisodes } from "../types/type"
 import api from "@/api/axios"
 import Episode from "../components/Episode"
 import "./page.css"
-import { useRouter } from "next/navigation"
 import Paginador from "../components/Paginador"
+import { useLista } from "@/context/Provider"
 
 
 
 const episode = () => {
-    const router=useRouter()
+    const { addToList } = useLista()
     const [episode, setEpisode] = useState<ResultsEpisodes | null>(null)
     const [loading, setLoading] = useState<boolean>(true)
-    const[page,setPage]=useState<number>(1)
+    const [page, setPage] = useState<number>(1)
     const getEpisode = async () => {
         try {
             api.get(`/episode/?page=${page}`)
@@ -32,20 +32,25 @@ const episode = () => {
 
     useEffect(() => {
         getEpisode()
-    },[page])
+    }, [page])
 
-    if(loading){
+    if (loading) {
         return <h1>Loading...</h1>
     }
 
     return (
         <div className="episodelist">
             {episode?.results.map((ep) => (
-                <Episode key={ep.id} episode={ep}></Episode>
+                <div className="containerAÑADIR" key={ep.id}>
+                    <Episode episode={ep}></Episode>
+                    <button className="addToListButton" onClick={() =>
+                        addToList(ep)
+                    }>Añadir a favoritos</button>
+                </div>
             )
             )}
 
-            <Paginador next={!!episode?.info.next} prev={!!episode?.info.prev} page={page} setPage={((e)=>{setPage(e)})}></Paginador>
+            <Paginador next={!!episode?.info.next} prev={!!episode?.info.prev} page={page} setPage={((e) => { setPage(e) })}></Paginador>
 
         </div>
     )

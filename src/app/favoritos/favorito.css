@@ -1,0 +1,26 @@
+
+
+.containerFavoritos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.containerLista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerLista button{
+    margin-bottom: 10px;
+    background-color: rgb(255, 223, 127);
+}
+
+.BTNELIMINAR:hover{
+    cursor:pointer
+}

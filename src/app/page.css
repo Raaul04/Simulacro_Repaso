@@ -1,12 +1,53 @@
 
 .Home {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:100%;
-    height: 400px;
+    gap: 28px;
+    width: 100%;
+    min-height: 70vh;
+    padding: 32px 20px 48px;
+    text-align: center;
 }
 
-.Home svg {
-    transform: scale(5);
+.LoginCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 760px;
+}
+
+.LoginCard p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.LoginCard input {
+    width: min(100%, 360px);
+    padding: 10px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.ButtonRow {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Illustration {
+    width: min(100%, 280px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Illustration svg {
+    width: 100%;
+    height: auto;
+    transform: none;
 }
