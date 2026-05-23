@@ -19,6 +19,7 @@
   color: white;
   border: none;
   border-radius: 5px;
+  gap: 30px;
 }
 .buttonId:hover{
   background-color: blueviolet;

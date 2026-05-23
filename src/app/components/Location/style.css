@@ -1,0 +1,35 @@
+.containerLocation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin: 30px 10px 10px 10px;
+    padding: 15px;
+    gap: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: darksalmon;
+    overflow: hidden;
+}
+.containerLocation:hover{
+    scale: 1.2;
+}
+
+.locationAtrib{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 15px ;
+}
+
+.buttonLocation{
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.buttonLocation:hover{
+    cursor: pointer;
+    scale: 1.1;
+}

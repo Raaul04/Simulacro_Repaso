@@ -1,27 +1,42 @@
-
-.episodelist{
+.episodelist {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 25px 1px;
 }
-.containerAÑADIR{
+
+.containerAÑADIR {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
+    gap: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
-.addToListButton{
+.containerAÑADIR:hover {
+    background-color: rgb(25, 245, 230);
+    scale: 1.1;
+    border-radius: 10px;
+}
+
+.addToListButton {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-bottom:20px;
-    border-radius: 2px;
+    margin-bottom: 50px;
     background-color: bisque;
+    border-radius: 6px;
+
 }
-.addToListButton:hover{
+
+.addToListButton:hover {
     background-color: aqua;
-    
+    scale: 1.1;
+    border-radius: 6px;
+
+
 }

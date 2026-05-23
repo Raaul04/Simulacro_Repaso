@@ -1,0 +1,40 @@
+.locationIdComp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20;
+    width: 100%;
+    flex-direction: column;
+}
+
+.locationPersonajes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+.btnPersonajes{
+    width: 120px;
+    height: auto;
+    background-color: beige;
+    border-radius: 10px;
+}
+.btnPersonajes:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.btnVolver{
+    margin-top: 10px;
+    background-color: rgb(193, 30, 248);
+    color: floralwhite;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.btnVolver:hover{
+    cursor: pointer;
+    scale: 1.1;
+}

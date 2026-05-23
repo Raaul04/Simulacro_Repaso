@@ -4,13 +4,12 @@
     justify-content: center;
     margin: 10 20 30;
     padding: 25px 1px;
-    border: 2px solid rgb(198, 198, 101);
-    border-radius: 10px;
+    
 
 }
 
 .episodeComponente h1{
-    text-decoration: underline bisque;
+    text-decoration: underline rgb(19, 163, 166);
     color: beige;
     margin-left: 5px;
 }
@@ -28,15 +27,11 @@
     margin-left: 15px;
     margin-right: 10px;
     border-radius: 10px;
-    border: 2px solid slateblue;
     background-color: rgb(65, 157, 157);
 }
 
 .titleEpisode p {
     overflow: hidden;
-}
-.titleEpisode:hover{
-    background-color: rgb(15, 234, 242);
 }
 
 .buttonEpisode{

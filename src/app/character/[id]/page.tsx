@@ -49,6 +49,9 @@ const CharacterId=()=>{
                 )}
             />
             <button className="buttonId" onClick={()=>router.push("/character")}>Volver a la lista de personajes</button>
+            <button className="buttonId"onClick={()=>router.back()}>Volver Atras</button>
+
+            
         </div>
     )
 }

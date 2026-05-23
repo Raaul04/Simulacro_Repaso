@@ -2,10 +2,12 @@
 import { useLista } from "@/context/Provider"
 import "./favorito.css"
 import Episode from "../components/Episode"
+import { useRouter } from "next/navigation"
 
 
 
 const page = () => {
+    const router=useRouter()
     const { episodes, deleteFromList } = useLista()
     
     return (
@@ -20,6 +22,8 @@ const page = () => {
                     </button>
                 </div>
             ))}
+            <button onClick={()=>router.back()}>Volver atras</button>
+
         </div>
     )
 }

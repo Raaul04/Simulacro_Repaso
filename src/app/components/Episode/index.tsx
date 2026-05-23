@@ -13,8 +13,10 @@ const Episode=({episode}:{episode:EpisodeS})=>{
             <div className="titleEpisode">
                 <p>{episode.episode}</p>
                 <p>{episode.created}</p>
+                <button className="buttonEpisode" onClick={()=>router.push(`/episode/${episode.id}`)}>Ver episodio</button>
+
             </div>
-            <button className="buttonEpisode" onClick={()=>router.push(`/episode/${episode.id}`)}>Ver episodio</button>
+            
 
         </div>
     )

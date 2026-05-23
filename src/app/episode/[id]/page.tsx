@@ -36,8 +36,8 @@ const episode=()=>{
 
     return(
         <div style={{display:"flex",flexWrap:"wrap", backgroundColor:"lightgray",   alignItems:"center",gap:"20px" ,marginTop:"20px", border:"1px solid black", borderRadius:"10px",  padding:"20px"}}>
-            {episode?.characters.map((characterUrl) => {
-                return (
+            {episode?.characters.map((characterUrl) => (
+                <div key={characterUrl}>
                     <button style={{padding:"10px 20px",fontSize:"10px",cursor:"pointer", backgroundColor:"cyan" }}
                         key={characterUrl}// el key es el URL del personaje, que es único
                         onClick={() => router.push(characterUrl.replace(`https://rickandmortyapi.com/api`, ``))}
@@ -47,9 +47,11 @@ const episode=()=>{
                     >                                                                                          
                         Ver personaje
                     </button>
-                )
-            })}
+                </div>
+                
+            ))}
             <button style={{padding:"10px 20px",fontSize:"10px",cursor:"pointer", backgroundColor:"red" }} onClick={()=>router.push(`/episode`)}>Volver a episodes</button>
+            <button style={{width:"100%"}} onClick={()=>router.back()}>Volver atras</button>
 
         </div>
     )
